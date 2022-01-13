@@ -1,0 +1,12 @@
+LaunchTargetManager/com.espressif.idf.launch.serial.core.serialFlashTarget,esp32/arch=xtensa
+LaunchTargetManager/com.espressif.idf.launch.serial.core.serialFlashTarget,esp32/com.espressif.idf.launch.serial.core.idfTarget=esp32
+LaunchTargetManager/com.espressif.idf.launch.serial.core.serialFlashTarget,esp32/name=esp32
+LaunchTargetManager/com.espressif.idf.launch.serial.core.serialFlashTarget,esp32/os=esp32
+LaunchTargetManager/com.espressif.idf.launch.serial.core.serialFlashTarget,esp32s2/arch=xtensa
+LaunchTargetManager/com.espressif.idf.launch.serial.core.serialFlashTarget,esp32s2/com.espressif.idf.launch.serial.core.idfTarget=esp32s2
+LaunchTargetManager/com.espressif.idf.launch.serial.core.serialFlashTarget,esp32s2/name=esp32s2
+LaunchTargetManager/com.espressif.idf.launch.serial.core.serialFlashTarget,esp32s2/os=esp32s2
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+eclipse.preferences.version=1

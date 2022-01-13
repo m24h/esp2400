@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name my)(type Legacy)(uri ${KIPRJMOD}/my.lib)(options "")(descr ""))
+  (lib (name esp2400-rescue)(type Legacy)(uri ${KIPRJMOD}/esp2400-rescue.lib)(options "")(descr ""))
+)

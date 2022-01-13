@@ -1,0 +1,144 @@
+!SESSION 2021-11-23 01:46:53.115 -----------------------------------------------
+eclipse.buildId=4.20.0.I20210611-1600
+java.version=16.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.ui 2 0 2021-11-23 01:47:31.014
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-11-23 01:47:31.014
+!MESSAGE Commands should really have a category: plug-in='com.espressif.idf.ui', id='com.espressif.commands.cleanCommand', categoryId='com.espressif.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2021-11-23 01:47:31.747
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-11-23 01:47:31.747
+!MESSAGE Commands should really have a category: plug-in='com.espressif.idf.ui', id='com.espressif.commands.cleanCommand', categoryId='com.espressif.commands.category'
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-11-23 01:47:46.152
+!MESSAGE Enablement expression is missing for descriptor type com.espressif.idf.debug.gdbjtag.openocd.descriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-11-23 01:47:46.154
+!MESSAGE Enablement expression is missing for config provider for com.espressif.idf.debug.gdbjtag.openocd.descriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-11-23 01:47:46.155
+!MESSAGE Enablement expression is missing for config provider for com.espressif.idf.launch.serial.core.idf.descriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-11-23 01:47:46.156
+!MESSAGE Enablement expression is missing for descriptor type com.espressif.idf.launch.serial.core.idf.descriptorType
+
+!ENTRY org.eclipse.egit.ui 2 0 2021-11-23 01:47:46.249
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\johnny'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:46.300
+!MESSAGE Eclipse Install location::file:/D:/AppData/.espressif/tools/idf-eclipse/2021-09/
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:46.324
+!MESSAGE Updating environment variables with key:IDF_PATH value:D:/ESPIDF/
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:46.426
+!MESSAGE 执行 D:/AppData/.espressif/python_env/idf5.0_py3.8_env/Scripts/python.exe D:\ESPIDF\tools\idf_tools.py export --format=key-value
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:47.478
+!MESSAGE OPENOCD_SCRIPTS=D:\AppData\.espressif\tools\openocd-esp32\v0.10.0-esp32-20211111\openocd-esp32\share\openocd\scripts
+IDF_CCACHE_ENABLE=1
+IDF_PYTHON_ENV_PATH=D:\AppData\.espressif\python_env\idf5.0_py3.8_env
+PATH=D:\AppData\.espressif\tools\xtensa-esp32-elf\esp-2021r2-8.4.0\xtensa-esp32-elf\bin;D:\AppData\.espressif\tools\xtensa-esp32s2-elf\esp-2021r2-8.4.0\xtensa-esp32s2-elf\bin;D:\AppData\.espressif\tools\xtensa-esp32s3-elf\esp-2021r2-8.4.0\xtensa-esp32s3-elf\bin;D:\AppData\.espressif\tools\riscv32-esp-elf\esp-2021r2-8.4.0\riscv32-esp-elf\bin;D:\AppData\.espressif\tools\esp32ulp-elf\2.28.51-esp-20191205\esp32ulp-elf-binutils\bin;D:\AppData\.espressif\tools\esp32s2ulp-elf\2.28.51-esp-20191205\esp32s2ulp-elf-binutils\bin;D:\AppData\.espressif\tools\cmake\3.20.3\bin;D:\AppData\.espressif\tools\openocd-esp32\v0.10.0-esp32-20211111\openocd-esp32\bin;D:\AppData\.espressif\tools\ninja\1.10.2\;D:\AppData\.espressif\tools\idf-exe\1.0.2\;D:\AppData\.espressif\tools\ccache\4.3\ccache-4.3-windows-64;D:\AppData\.espressif\tools\dfu-util\0.9\dfu-util-0.9-win64;D:\AppData\.espressif\python_env\idf5.0_py3.8_env\Scripts;D:\ESPIDF\tools;%PATH%
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:47.480
+!MESSAGE Key: OPENOCD_SCRIPTS Value: D:\AppData\.espressif\tools\openocd-esp32\v0.10.0-esp32-20211111\openocd-esp32\share\openocd\scripts
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:47.480
+!MESSAGE Updating environment variables with key:OPENOCD_SCRIPTS value:D:\AppData\.espressif\tools\openocd-esp32\v0.10.0-esp32-20211111\openocd-esp32\share\openocd\scripts
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:47.483
+!MESSAGE Key: IDF_CCACHE_ENABLE Value: 1
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:47.483
+!MESSAGE Updating environment variables with key:IDF_CCACHE_ENABLE value:1
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:47.485
+!MESSAGE Key: IDF_PYTHON_ENV_PATH Value: D:\AppData\.espressif\python_env\idf5.0_py3.8_env
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:47.485
+!MESSAGE Updating environment variables with key:IDF_PYTHON_ENV_PATH value:D:\AppData\.espressif\python_env\idf5.0_py3.8_env
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:47.488
+!MESSAGE Key: PATH Value: D:\AppData\.espressif\tools\xtensa-esp32-elf\esp-2021r2-8.4.0\xtensa-esp32-elf\bin;D:\AppData\.espressif\tools\xtensa-esp32s2-elf\esp-2021r2-8.4.0\xtensa-esp32s2-elf\bin;D:\AppData\.espressif\tools\xtensa-esp32s3-elf\esp-2021r2-8.4.0\xtensa-esp32s3-elf\bin;D:\AppData\.espressif\tools\riscv32-esp-elf\esp-2021r2-8.4.0\riscv32-esp-elf\bin;D:\AppData\.espressif\tools\esp32ulp-elf\2.28.51-esp-20191205\esp32ulp-elf-binutils\bin;D:\AppData\.espressif\tools\esp32s2ulp-elf\2.28.51-esp-20191205\esp32s2ulp-elf-binutils\bin;D:\AppData\.espressif\tools\cmake\3.20.3\bin;D:\AppData\.espressif\tools\openocd-esp32\v0.10.0-esp32-20211111\openocd-esp32\bin;D:\AppData\.espressif\tools\ninja\1.10.2\;D:\AppData\.espressif\tools\idf-exe\1.0.2\;D:\AppData\.espressif\tools\ccache\4.3\ccache-4.3-windows-64;D:\AppData\.espressif\tools\dfu-util\0.9\dfu-util-0.9-win64;D:\AppData\.espressif\python_env\idf5.0_py3.8_env\Scripts;D:\ESPIDF\tools;%PATH%
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:47.488
+!MESSAGE Updating environment variables with key:PATH value:D:\AppData\.espressif\tools\xtensa-esp32-elf\esp-2021r2-8.4.0\xtensa-esp32-elf\bin;D:\AppData\.espressif\tools\xtensa-esp32s2-elf\esp-2021r2-8.4.0\xtensa-esp32s2-elf\bin;D:\AppData\.espressif\tools\xtensa-esp32s3-elf\esp-2021r2-8.4.0\xtensa-esp32s3-elf\bin;D:\AppData\.espressif\tools\riscv32-esp-elf\esp-2021r2-8.4.0\riscv32-esp-elf\bin;D:\AppData\.espressif\tools\esp32ulp-elf\2.28.51-esp-20191205\esp32ulp-elf-binutils\bin;D:\AppData\.espressif\tools\esp32s2ulp-elf\2.28.51-esp-20191205\esp32s2ulp-elf-binutils\bin;D:\AppData\.espressif\tools\cmake\3.20.3\bin;D:\AppData\.espressif\tools\openocd-esp32\v0.10.0-esp32-20211111\openocd-esp32\bin;D:\AppData\.espressif\tools\ninja\1.10.2\;D:\AppData\.espressif\tools\idf-exe\1.0.2\;D:\AppData\.espressif\tools\ccache\4.3\ccache-4.3-windows-64;D:\AppData\.espressif\tools\dfu-util\0.9\dfu-util-0.9-win64;D:\AppData\.espressif\python_env\idf5.0_py3.8_env\Scripts;D:\ESPIDF\tools;D:/AppData/.espressif/tools/idf-eclipse/2021-09//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205/jre/bin/server;D:/AppData/.espressif/tools/idf-eclipse/2021-09//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205/jre/bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\OpenSSH\;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\dotnet\;C:\Shell\Tool;C:\Shell\Sysint;C:\Shell\JDK\bin;C:\SHELL\OpenSSL\bin;C:\SHELL\Perl\bin;C:\SHELL\Python\Scripts\;C:\SHELL\Python\;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\johnny\AppData\Local\Microsoft\WindowsApps;;D:\AppData\.espressif\tools\idf-eclipse\2021-09;;D:\AppData\.espressif\tools\idf-git\2.30.1\cmd
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:51.160
+!MESSAGE Initializing toolchain...
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:51.161
+!MESSAGE idf_tools.py path: D:/ESPIDF//tools/idf_tools.py
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:51.162
+!MESSAGE [D:\AppData\.espressif\python_env\idf5.0_py3.8_env\Scripts\python.exe, D:/ESPIDF//tools/idf_tools.py, export, --format=key-value]
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:52.204
+!MESSAGE idf_tools.py export output: OPENOCD_SCRIPTS=D:\AppData\.espressif\tools\openocd-esp32\v0.10.0-esp32-20211111\openocd-esp32\share\openocd\scripts
+IDF_CCACHE_ENABLE=1
+IDF_PYTHON_ENV_PATH=D:\AppData\.espressif\python_env\idf5.0_py3.8_env
+PATH=D:\AppData\.espressif\tools\xtensa-esp32-elf\esp-2021r2-8.4.0\xtensa-esp32-elf\bin;D:\AppData\.espressif\tools\xtensa-esp32s2-elf\esp-2021r2-8.4.0\xtensa-esp32s2-elf\bin;D:\AppData\.espressif\tools\xtensa-esp32s3-elf\esp-2021r2-8.4.0\xtensa-esp32s3-elf\bin;D:\AppData\.espressif\tools\riscv32-esp-elf\esp-2021r2-8.4.0\riscv32-esp-elf\bin;D:\AppData\.espressif\tools\esp32ulp-elf\2.28.51-esp-20191205\esp32ulp-elf-binutils\bin;D:\AppData\.espressif\tools\esp32s2ulp-elf\2.28.51-esp-20191205\esp32s2ulp-elf-binutils\bin;D:\AppData\.espressif\tools\cmake\3.20.3\bin;D:\AppData\.espressif\tools\openocd-esp32\v0.10.0-esp32-20211111\openocd-esp32\bin;D:\AppData\.espressif\tools\ninja\1.10.2\;D:\AppData\.espressif\tools\idf-exe\1.0.2\;D:\AppData\.espressif\tools\ccache\4.3\ccache-4.3-windows-64;D:\AppData\.espressif\tools\dfu-util\0.9\dfu-util-0.9-win64;D:\AppData\.espressif\python_env\idf5.0_py3.8_env\Scripts;D:\ESPIDF\tools;%PATH%
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:52.205
+!MESSAGE PATH: D:\AppData\.espressif\tools\xtensa-esp32-elf\esp-2021r2-8.4.0\xtensa-esp32-elf\bin;D:\AppData\.espressif\tools\xtensa-esp32s2-elf\esp-2021r2-8.4.0\xtensa-esp32s2-elf\bin;D:\AppData\.espressif\tools\xtensa-esp32s3-elf\esp-2021r2-8.4.0\xtensa-esp32s3-elf\bin;D:\AppData\.espressif\tools\riscv32-esp-elf\esp-2021r2-8.4.0\riscv32-esp-elf\bin;D:\AppData\.espressif\tools\esp32ulp-elf\2.28.51-esp-20191205\esp32ulp-elf-binutils\bin;D:\AppData\.espressif\tools\esp32s2ulp-elf\2.28.51-esp-20191205\esp32s2ulp-elf-binutils\bin;D:\AppData\.espressif\tools\cmake\3.20.3\bin;D:\AppData\.espressif\tools\openocd-esp32\v0.10.0-esp32-20211111\openocd-esp32\bin;D:\AppData\.espressif\tools\ninja\1.10.2\;D:\AppData\.espressif\tools\idf-exe\1.0.2\;D:\AppData\.espressif\tools\ccache\4.3\ccache-4.3-windows-64;D:\AppData\.espressif\tools\dfu-util\0.9\dfu-util-0.9-win64;D:\AppData\.espressif\python_env\idf5.0_py3.8_env\Scripts;D:\ESPIDF\tools;%PATH%
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:52.207
+!MESSAGE [D:\AppData\.espressif\tools\xtensa-esp32-elf\esp-2021r2-8.4.0\xtensa-esp32-elf\bin;D:\AppData\.espressif\tools\xtensa-esp32s2-elf\esp-2021r2-8.4.0\xtensa-esp32s2-elf\bin;D:\AppData\.espressif\tools\xtensa-esp32s3-elf\esp-2021r2-8.4.0\xtensa-esp32s3-elf\bin;D:\AppData\.espressif\tools\riscv32-esp-elf\esp-2021r2-8.4.0\riscv32-esp-elf\bin;D:\AppData\.espressif\tools\esp32ulp-elf\2.28.51-esp-20191205\esp32ulp-elf-binutils\bin;D:\AppData\.espressif\tools\esp32s2ulp-elf\2.28.51-esp-20191205\esp32s2ulp-elf-binutils\bin;D:\AppData\.espressif\tools\cmake\3.20.3\bin;D:\AppData\.espressif\tools\openocd-esp32\v0.10.0-esp32-20211111\openocd-esp32\bin;D:\AppData\.espressif\tools\ninja\1.10.2\;D:\AppData\.espressif\tools\idf-exe\1.0.2\;D:\AppData\.espressif\tools\ccache\4.3\ccache-4.3-windows-64;D:\AppData\.espressif\tools\dfu-util\0.9\dfu-util-0.9-win64;D:\AppData\.espressif\python_env\idf5.0_py3.8_env\Scripts;D:\ESPIDF\tools;%PATH%]
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:52.458
+!MESSAGE Initializing toolchain...
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:52.458
+!MESSAGE idf_tools.py path: D:/ESPIDF//tools/idf_tools.py
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:52.459
+!MESSAGE [D:\AppData\.espressif\python_env\idf5.0_py3.8_env\Scripts\python.exe, D:/ESPIDF//tools/idf_tools.py, export, --format=key-value]
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:53.523
+!MESSAGE idf_tools.py export output: OPENOCD_SCRIPTS=D:\AppData\.espressif\tools\openocd-esp32\v0.10.0-esp32-20211111\openocd-esp32\share\openocd\scripts
+IDF_CCACHE_ENABLE=1
+IDF_PYTHON_ENV_PATH=D:\AppData\.espressif\python_env\idf5.0_py3.8_env
+PATH=D:\AppData\.espressif\tools\xtensa-esp32-elf\esp-2021r2-8.4.0\xtensa-esp32-elf\bin;D:\AppData\.espressif\tools\xtensa-esp32s2-elf\esp-2021r2-8.4.0\xtensa-esp32s2-elf\bin;D:\AppData\.espressif\tools\xtensa-esp32s3-elf\esp-2021r2-8.4.0\xtensa-esp32s3-elf\bin;D:\AppData\.espressif\tools\riscv32-esp-elf\esp-2021r2-8.4.0\riscv32-esp-elf\bin;D:\AppData\.espressif\tools\esp32ulp-elf\2.28.51-esp-20191205\esp32ulp-elf-binutils\bin;D:\AppData\.espressif\tools\esp32s2ulp-elf\2.28.51-esp-20191205\esp32s2ulp-elf-binutils\bin;D:\AppData\.espressif\tools\cmake\3.20.3\bin;D:\AppData\.espressif\tools\openocd-esp32\v0.10.0-esp32-20211111\openocd-esp32\bin;D:\AppData\.espressif\tools\ninja\1.10.2\;D:\AppData\.espressif\tools\idf-exe\1.0.2\;D:\AppData\.espressif\tools\ccache\4.3\ccache-4.3-windows-64;D:\AppData\.espressif\tools\dfu-util\0.9\dfu-util-0.9-win64;D:\AppData\.espressif\python_env\idf5.0_py3.8_env\Scripts;D:\ESPIDF\tools;%PATH%
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:53.524
+!MESSAGE PATH: D:\AppData\.espressif\tools\xtensa-esp32-elf\esp-2021r2-8.4.0\xtensa-esp32-elf\bin;D:\AppData\.espressif\tools\xtensa-esp32s2-elf\esp-2021r2-8.4.0\xtensa-esp32s2-elf\bin;D:\AppData\.espressif\tools\xtensa-esp32s3-elf\esp-2021r2-8.4.0\xtensa-esp32s3-elf\bin;D:\AppData\.espressif\tools\riscv32-esp-elf\esp-2021r2-8.4.0\riscv32-esp-elf\bin;D:\AppData\.espressif\tools\esp32ulp-elf\2.28.51-esp-20191205\esp32ulp-elf-binutils\bin;D:\AppData\.espressif\tools\esp32s2ulp-elf\2.28.51-esp-20191205\esp32s2ulp-elf-binutils\bin;D:\AppData\.espressif\tools\cmake\3.20.3\bin;D:\AppData\.espressif\tools\openocd-esp32\v0.10.0-esp32-20211111\openocd-esp32\bin;D:\AppData\.espressif\tools\ninja\1.10.2\;D:\AppData\.espressif\tools\idf-exe\1.0.2\;D:\AppData\.espressif\tools\ccache\4.3\ccache-4.3-windows-64;D:\AppData\.espressif\tools\dfu-util\0.9\dfu-util-0.9-win64;D:\AppData\.espressif\python_env\idf5.0_py3.8_env\Scripts;D:\ESPIDF\tools;%PATH%
+
+!ENTRY com.espressif.idf.core 1 0 2021-11-23 01:47:53.525
+!MESSAGE [D:\AppData\.espressif\tools\xtensa-esp32-elf\esp-2021r2-8.4.0\xtensa-esp32-elf\bin;D:\AppData\.espressif\tools\xtensa-esp32s2-elf\esp-2021r2-8.4.0\xtensa-esp32s2-elf\bin;D:\AppData\.espressif\tools\xtensa-esp32s3-elf\esp-2021r2-8.4.0\xtensa-esp32s3-elf\bin;D:\AppData\.espressif\tools\riscv32-esp-elf\esp-2021r2-8.4.0\riscv32-esp-elf\bin;D:\AppData\.espressif\tools\esp32ulp-elf\2.28.51-esp-20191205\esp32ulp-elf-binutils\bin;D:\AppData\.espressif\tools\esp32s2ulp-elf\2.28.51-esp-20191205\esp32s2ulp-elf-binutils\bin;D:\AppData\.espressif\tools\cmake\3.20.3\bin;D:\AppData\.espressif\tools\openocd-esp32\v0.10.0-esp32-20211111\openocd-esp32\bin;D:\AppData\.espressif\tools\ninja\1.10.2\;D:\AppData\.espressif\tools\idf-exe\1.0.2\;D:\AppData\.espressif\tools\ccache\4.3\ccache-4.3-windows-64;D:\AppData\.espressif\tools\dfu-util\0.9\dfu-util-0.9-win64;D:\AppData\.espressif\python_env\idf5.0_py3.8_env\Scripts;D:\ESPIDF\tools;%PATH%]
+
+!ENTRY com.espressif.idf.ui 4 0 2021-11-23 01:48:49.529
+!MESSAGE Project cannot be created
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:173)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:57)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:266)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:252)
+	at org.eclipse.tools.templates.freemarker.FMProjectGenerator.createProject(FMProjectGenerator.java:83)
+	at org.eclipse.tools.templates.freemarker.FMProjectGenerator.generate(FMProjectGenerator.java:65)
+	at org.eclipse.cdt.cmake.core.CMakeProjectGenerator.generate(CMakeProjectGenerator.java:58)
+	at com.espressif.idf.ui.templates.IDFProjectGenerator.generate(IDFProjectGenerator.java:65)
+	at org.eclipse.tools.templates.ui.TemplateWizard$1.execute(TemplateWizard.java:95)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:110)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:131)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Contains: OK
+Contains: D:\WORK\2021-ZXD2400ESP\code overlaps the workspace location: D:\WORK\2021-ZXD2400ESP\code
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2021-11-23 01:48:49.531
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2021-11-23 01:48:49.531
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2021-11-23 01:48:49.531
+!MESSAGE D:\WORK\2021-ZXD2400ESP\code overlaps the workspace location: D:\WORK\2021-ZXD2400ESP\code

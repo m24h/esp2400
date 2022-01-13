@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Access-Control-Allow-Origin" content="*" />
+		<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'" />		
+		<title>ZXD2400</title>
+		<script type="text/javascript" src="jq360.js"></script>
+    	      <style type="text/css">
+			#tbl_main {
+				width: 500px;
+			}
+			#tbl_main td {
+				column-width: 250px;
+				white-space: nowrap;
+			}
+			#vc {
+				color:#00FF00;
+				font-size:48px;
+			}
+			#ic {
+				color:#FF0000;
+				font-size:48px;
+			}
+			#vc.off {
+			   color:#808080;
+			}
+			#ic.off {
+			   color:#808080;
+			}
+			#vs {
+				width: 100px;
+				font-size:24px;
+				color:#00D000;
+			}
+			#is {
+				width: 100px;
+				font-size:22px;
+				color:#D00000;
+			}
+			#vs.off {
+			   color:#808080;
+			}
+			#is.off {
+			   color:#808080;
+			}
+			#btn_vs {
+				margin-left:10px;
+				font-size:22px;
+			}
+			#btn_is {
+				margin-left:10px;
+				font-size:20px;
+			}
+			#stat {
+				color:#000000;
+				font-size:22px;
+			}
+			#period {
+				color:#000000;
+				font-size:20px;
+			}
+			#btn_onoff {
+				margin-right:50px;
+				font-size:22px;
+			}
+			#temp {
+				color:#0000FF;
+				font-size:24px;
+			}
+			#vg {
+				border:1px solid #d3ffd3;
+			}
+			#ig {
+				border:1px solid #ffd3d3;
+			}
+			#vm {
+				font-size:12px;
+			}
+			#im {
+				font-size:12px;
+			}
+			#passhint {
+				font-size:20px;
+			}
+			#pass{
+				margin-left:10px;
+				font-size:18px;
+			}
+			#e {
+				font-size:20px;
+			}
+			#ehint {
+				font-size:20px;
+			}
+		      #btn_e {
+				margin-left:10px;
+				font-size:18px;
+			}
+			#btn_msg{
+				margin-left:10px;
+				font-size:18px;
+			}
+			#msghint {
+				font-size:20px;
+			}
+			#msg{
+				margin-left:10px;
+				font-size:18px;
+			}
+			#result {
+				font-size:20px;
+			}
+		</style>
+		<script type="text/javascript" >
+		       var host="";
+			function show(resp) {
+		                if (resp.ret=="ok") {
+		             	$("#vc").html(""+resp.vc/1000+"V");
+		             	$("#ic").html(""+resp.ic/1000+"A");
+		             	if (resp.on) {
+		             		$("#vc").removeClass("off");
+		             		$("#ic").removeClass("off");
+		             		$("#vs").removeClass("off");
+		             		$("#is").removeClass("off");
+		             	} else {
+		             		$("#vc").addClass("off");
+		             		$("#ic").addClass("off");
+		             		$("#vs").addClass("off");
+		             		$("#is").addClass("off");
+		             	}
+		             	$("#temp").html(""+resp.temp+" ℃");
+		             	$("#btn_onoff").val(resp.on?"关闭输出":"打开输出");
+		             	$("#btn_onoff").attr("valuesend", resp.on?"0":"1");
+		             	$("#e").html(""+resp.e+"J");
+		             	if(document.activeElement.id!="vs") $("#vs").val(""+resp.vs/1000);
+		             	if(document.activeElement.id!="is") $("#is").val(""+resp.is/1000);
+		             	$("#result").html("");
+		                } else $("#result").text(resp.ret);
+			}
+			function get(){
+ 			       $.ajax({
+            			type: 'GET',
+            			url: host+"/data/get?pass="+encodeURIComponent($("#pass").val()),
+            			dataType: 'json',
+			            success: function(resp) {
+			            	show(resp);
+			             } ,
+			             complete:function() {
+			             	setTimeout(get, 2000);
+			             }
+                        });
+			}
+
+			function setV() {
+			       $.ajax({
+            			type: 'GET',
+            			url: host+"/data/set?pass="+encodeURIComponent($("#pass").val())+"&vs="+Math.round(parseFloat($("#vs").val())*1000),
+            			dataType: 'json',
+			            success: function(resp) {
+			            	show(resp);
+			             } 
+                         });
+			}
+
+			function setI() {
+			       $.ajax({
+            			type: 'GET',
+            			url: host+"/data/set?pass="+encodeURIComponent($("#pass").val())+"&is="+Math.round(parseFloat($("#is").val())*1000),
+            			dataType: 'json',
+			            success: function(resp) {
+			            	show(resp);
+			            }
+                         });
+			   }
+		       function setOnOff() {
+			       $.ajax({
+            			type: 'GET',
+            			url: host+"/data/set?pass="+encodeURIComponent($("#pass").val())+"&on="+$("#btn_onoff").attr("valuesend"),
+            			dataType: 'json',
+			            success: function(resp) {
+			            	show(resp);
+			            }
+                         });
+		       }
+			function zeroE() {
+			       $.ajax({
+            			type: 'GET',
+            			url: host+"/data/set?pass="+encodeURIComponent($("#pass").val())+"&e=0",
+            			dataType: 'json',
+			            success: function(resp) {
+			            	show(resp);
+			            }
+                         });
+			   }
+
+			function setMsg() {
+			       $.ajax({
+            			type: 'GET',
+            			url: host+"/data/set?pass="+encodeURIComponent($("#pass").val())+"&msg="+encodeURIComponent($("#msg").val()),
+            			dataType: 'json',
+            			contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+			            success: function(resp) {
+		            	  show(resp);
+			                if (resp.ret=="ok") 
+			             	alert("消息已设置");
+			             } 
+                         });
+			}
+
+	           function stat() {
+			       $.ajax({
+            			type: 'GET',
+            			url: host+"/data/stat?pass="+encodeURIComponent($("#pass").val())+"&period="+$("#period").val(),
+            			dataType: 'json',
+			            success: function(resp) {
+		            	  show(resp);
+			               if (resp.ret=="ok") {
+							var n=resp.stat.length;
+							var i,j;
+							var vmax=resp.vc;
+							var vmin=resp.vc;
+							var imax=resp.ic;
+							var imin=resp.ic;
+							var vavg=0;
+							var iavg=0;
+							for (i=0;i<n;i++) {
+								if (vmax<resp.stat[i].v[2]) vmax=resp.stat[i].v[2];
+								if (vmin>resp.stat[i].v[0]) vmin=resp.stat[i].v[0];
+								if (imax<resp.stat[i].i[2]) imax=resp.stat[i].i[2];
+								if (imin>resp.stat[i].i[0]) imin=resp.stat[i].i[0];
+								vavg=vavg+resp.stat[i].v[1];
+								iavg=iavg+resp.stat[i].i[1];
+							}
+							vavg=Math.round(vavg/n);
+							iavg=Math.round(iavg/n);
+							$("#vm").html("Avg: "+vavg/1000+" Min: "+vmin/1000+" Max: "+vmax/1000);
+							$("#im").html("Avg: "+iavg/1000+" Min: "+imin/1000+" Max: "+imax/1000);
+	
+				            var ve=$("#vg")[0];
+				            var ie=$("#ig")[0];
+					        var vg=ve.getContext("2d");
+					        var ig=ie.getContext("2d");
+					        vg.clearRect(0,0,ve.width,ve.height);
+					        ig.clearRect(0,0,ie.width,ie.height);
+	
+							if (n<2) return; // no need to draw   
+							
+					        vg.beginPath();   
+					        ig.beginPath();   
+							vg.fillStyle="#00FF00";   
+							ig.fillStyle="#FF0000";   
+							vg.strokeStyle="#00FF00";   
+							ig.strokeStyle="#FF0000"; 
+							
+							// show better when value is low , filter small fluctuating of vmax/imax off
+							vmax=vmax+200;
+							imax=imax+200;
+							
+							// for maybe negative point exists
+							if (vmin<0) vmax=vmax-vmin;
+							else vmin=0;
+							if (imin<0) imax=imax-imin;
+							else imin=0;
+							
+							i=1;
+							if (n>125) i=n-125; // width:250 /2
+							vg.moveTo(0,ve.height-Math.round((resp.stat[i].v[1]-vmin)*ve.height/vmax));  
+							ig.moveTo(0,ie.height-Math.round((resp.stat[i].i[1]-imin)*ie.height/imax));  
+							for (j=1,i++;i<n;i++,j++) {
+							  vg.lineTo(j*2,ve.height-Math.round((resp.stat[i].v[1]-vmin)*ve.height/vmax));   
+							  ig.lineTo(j*2,ie.height-Math.round((resp.stat[i].i[1]-imin)*ie.height/imax));
+							}
+							vg.stroke();   
+							ig.stroke(); 
+			                } 
+				     },
+			         complete:function() {
+			             setTimeout(stat, 2000);
+			         }
+				});
+			}
+	
+			$(function() {
+//				get();
+			    stat();
+			});
+		</script>
+	</head>
+	<body>
+		<table id="tbl_main">
+			<tr>
+				<td>
+					<div><span id="vc">V</span></div>
+				</td>
+				<td>
+					<div><span id="ic">A</span></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div>
+						<input id="vs" type="text" size="5" value="0"/>
+						<span>V</span>
+						<input id="btn_vs" type="button" value="SET" onclick="setV()"/>
+					</div>
+				</td>
+				<td>
+					<div>
+						<input id="is" type="text" size="5" value="0"/>
+						<span>A</span>
+						<input id="btn_is" type="button" value="SET"  onclick="setI()"/>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="stat">统计方式 按
+						<select id="period">
+							<option value="s">秒数</option>
+							<option value="m">分钟</option>
+							<option value="h">小时</option>
+						</select></div>
+				</td>
+				<td>
+					<div><input id="btn_onoff" type="button" valuesend="0" value="关闭输出"  onclick="setOnOff()" />
+					<span id="temp">℃</span></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<canvas id="vg" width="250" height="100">Your browser does not support the HTML5 canvas tag</canvas>
+				</td>
+				<td>
+					<canvas id="ig" width="250" height="100">Your browser does not support the HTML5 canvas tag</canvas>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div><span id="vm">Avg: , Min:, Max</span></div>
+				</td>
+				<td>
+					<div><span id="im">Avg: , Min:, Max</span></div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<span id="ehint">总能量</span>
+					<span id="e"></span>
+					<input id="btn_e" type="button"  value="清零" onclick="zeroE();"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<span id="passhint">如有需要, 请提供口令</span>
+					<input id="pass" type="password"  value=""/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<span id="msghint">设置显示消息</span>
+					<input id="msg" type="text"  value=""/>
+					<input id="btn_msg" type="button" value="SET"  onclick="setMsg()"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<span id="result">OK</span>
+				</td>
+			</tr>
+		</table>
+		
+	</body>
+</html>
